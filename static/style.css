@@ -1,0 +1,120 @@
+
+/*basic styling */
+body {
+  font-family: sans-serif;
+  color: cornflowerblue;
+  /*background-color: floralwhite;*/
+  background-color: black;
+}
+h1, h2 {
+  font-size: 40px;
+  font-family: sans-serif;
+  padding-bottom: 5px;
+  text-align: center;
+}
+ol {
+  list-style-type: none;
+  list-style-position:inside;
+}
+ol li a, ul li a{
+  text-decoration: none;
+}
+ol li a:hover{
+  background-color: green;
+}
+ul {
+  list-style: square;
+  counter-reset: cupcake;
+  padding-left: 32px;
+}
+ul li {
+  list-style: none;
+  counter-increment: cupcake;
+}
+ul li:before {
+  content: counters(cupcake, ".") ". ";
+}
+
+/* id specific styling for better looks */
+#content {
+  padding: 10px;
+  border-style: solid;
+  border-color: white;
+  /*width: 600px;
+  float: left;*/
+}
+
+#content:hover {
+  background-color: floralwhite;
+}
+
+#timestamp {
+  padding: 10px;
+  border-style: solid;
+  border-color: white;
+  /*width: 600px;
+  float: left;*/
+}
+#timestamp:hover {
+  background-color: floralwhite;
+}
+
+#links {
+  padding: 10px;
+  border-style: solid;
+  border-color: white;
+  /*float: right;
+  width: 400px;*/
+}
+#links:hover {
+  background-color: floralwhite;
+}
+
+#tasklist {
+  padding: 10px;
+  border-style: solid;
+  border-color: white;
+}
+#tasklist:hover {
+  background-color: floralwhite;
+}
+
+#newtaskentry {
+  padding: 10px;
+  border-style: solid;
+  border-color: white;
+}
+
+#newtaskentry:hover {
+  background-color: floralwhite;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  border-style: solid;
+  border-color: white;
+  background-color: black;
+  color: white;
+  margin:10px;
+}
+
+button[type="submit"]:hover {
+  background-color: floralwhite;
+  color: cornflowerblue;
+  cursor: pointer;
+}
+
+#datatitle {
+  padding: 0px 50px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+li label {
+  padding: 10px;
+  font-weight: bold;
+
+}
+#datatitle span, #datatitle strong, #datatitle a {
+  padding: 20px;
+}

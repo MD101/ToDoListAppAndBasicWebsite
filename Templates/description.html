@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Description/{{lists.title}}{% endblock %}
+{% block content %}
+<h1>{{ lists.title }}</h1>
+{{ list }}
+<p>{{ description.description }}</p>
+<button type="submit" onclick="location.href='/todolist'"><!--<a href="/">-->Return<!--</a>--></button>
+{% endblock %}

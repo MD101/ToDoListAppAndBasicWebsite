@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+{% block title %}Meeting{% endblock %}
+{% block content %}
+	<h1>To Do List</h1>
+	<form method="POST">
+	<div id="tasklist">
+		<button class="taskDelete" name="taskDelete" formnovalidate="" type="submit" onclick="$('input#sublist').click();">Delete Tasks</button>
+	  <ul>{% for todo in lists %}
+			  <li><input type="checkbox" name="checkedbox" id="{{ todo.id }}" value="{{ todo.id }}">
+					  <label for="{{ todo.id }}">Title: <span>{{ todo.title }}</span></label></br>
+					  <div id="datatitle">Category: <span>{{ todo.category }}</span></br>
+					  Duration: <strong>{{ todo.created_time_stamp }} - {{ todo.due_date }}</strong></br>
+					  <a href="{% url 'description' todo.id %}">Description</a>
+					</div>
+			  </li>
+	    {% endfor %}
+	  </ul>
+	</div>
+	<div id="newtaskentry">
+	  <h1>Add a New Entry</h1>
+
+		  <table>
+			  {{ form }}
+		  </table>
+		  {% csrf_token %}
+		  <button type="submit">Create</button>
+</div>
+	</form>
+<button type="submit" onclick="location.href='/'"><!--<a href="/">-->Return<!--</a>--></button>
+{% endblock %}

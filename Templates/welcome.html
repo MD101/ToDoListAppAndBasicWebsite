@@ -1,0 +1,22 @@
+{%extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+{% block title %}Welcome{% endblock %}
+{% block content %}
+<h2>A Basic Website</h2>
+<div id="content">
+  <p>This is a basic website format, sort of like first draft that was created by Mohammed Hussain as he's stepping in a new career Domain.
+    This is but a basic period, the real fun begins now</p>
+</div>
+<div id="timestamp">
+  <p>The current timestamp on the server is: <strong><emphasis>{{timestamp}}</emphasis> UTC</strong></p>
+</div>
+<div id="links">
+<h3>Pages Available</h3>
+<ol>
+  <li><a href="{% url 'about' %}">About MD</a></li>
+  <li><a href="{% url 'listing' %}">ToDoApp</a></li>
+  <li><a onclick="alert("this is a dialogue box");" href="{% url 'contactus' %}" >Contact MD</a></li>
+</ol>
+</div>
+{% endblock %}
